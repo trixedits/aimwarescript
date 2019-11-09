@@ -73,7 +73,7 @@ local ThirdPerson = gui.GetValue("vis_thirdperson_dist");
     	Keybinds[i] = '[Delay Shot]';
         i = i + 1;
      end
-	 if   gui.GetValue("msc_fakelag_enable") and input.IsButtonDown(gui.GetValue("msc_fakelag_key")) then
+	 if   gui.GetValue("msc_fakelag_enable") and gui.GetValue("msc_fakelag_key")~= 0  and input.IsButtonDown(gui.GetValue("msc_fakelag_key")) then
     	Keybinds[i] = '[Fake Lag]';
         i = i + 1;
      end
