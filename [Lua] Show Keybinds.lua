@@ -69,6 +69,18 @@ local ThirdPerson = gui.GetValue("vis_thirdperson_dist");
         i = i + 1;
      end
 
+     if   gui.GetValue("rbot_active") and gui.GetValue("rbot_delayshot") ~= 0  then
+    	Keybinds[i] = '[Delay Shot]';
+        i = i + 1;
+     end
+	 if   gui.GetValue("msc_fakelag_enable") and input.IsButtonDown(gui.GetValue("msc_fakelag_key")) then
+    	Keybinds[i] = '[Fake Lag]';
+        i = i + 1;
+     end
+	 	 if  gui.GetValue("rbot_active") and gui.GetValue("rbot_resolver_override")~= 0 and input.IsButtonDown(gui.GetValue("rbot_resolver_override")) then
+    	Keybinds[i] = '[Override Resolver]';
+        i = i + 1;
+     end
     return Keybinds;
 end
 
